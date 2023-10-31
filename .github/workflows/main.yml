@@ -8,18 +8,18 @@ on:
 
 jobs:
   build:
-     runs-on: ubuntu-lastes
+    runs-on: ubuntu-lastes
 
-  steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Install Poetry
-      run: pip install poetry
-    - name: Install dependencies
-      run: poetry install
-    - name: Run tests
-      run: poetry run coverage run --branch -m pytest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Poetry
+        run: pip install poetry
+      - name: Install dependencies
+        run: poetry install
+      - name: Run tests
+        run: poetry run coverage run --branch -m pytest
   
